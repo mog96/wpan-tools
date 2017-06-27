@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
 	uint8_t long_addr[IEEE802154_ADDR_LEN] = {0xd6, 0x55, 0x2c, 0xd6, 0xe4, 0x1c, 0xeb, 0x57};
 
 	/* Create IEEE 802.15.4 address family socket for the SOCK_DGRAM type */
-	sd = socket(AF_IEEE802154, SOCK_DGRAM, 0);
+	sd = socket(PF_IEEE802154, SOCK_DGRAM, 0);
 	if (sd < 0) {
 		perror("socket");
 		return 1;
